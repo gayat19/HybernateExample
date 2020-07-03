@@ -32,7 +32,7 @@ public class HibernateUtil {
 			properties.put(Environment.USER, "root");
 			properties.put(Environment.PASS, "p@ssw0rd");
 			properties.put(Environment.SHOW_SQL, "true");
-			properties.put(Environment.HBM2DDL_AUTO, "create-drop");
+			properties.put(Environment.HBM2DDL_AUTO, "update");
 			configuration.setProperties(properties);
 			configuration.addAnnotatedClass(Account.class);
 			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

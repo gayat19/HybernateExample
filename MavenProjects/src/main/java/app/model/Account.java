@@ -28,7 +28,11 @@ public class Account {
 		this.balance = balance;
 	}
 
-
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Account Number "+accountNumber+" Name "+accountHolderName+" balance "+balance;
+	}
 
 	public double getBalance() {
 		return balance;
