@@ -45,7 +45,7 @@ public class AccountDao {
 		}
 		return accounts;
 	}
-	public Account getAccounts(long givenId){
+	public Account getAccount(long givenId){
 		Transaction transaction = null;
 		Account account =null;
 		try {

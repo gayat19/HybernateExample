@@ -58,7 +58,7 @@ public class App {
 	private void deleteAccount() {
 		System.out.println("Please enter your account number");
 		long accountNumber = scanner.nextLong();
-		Account account = accountDao.getAccounts(1);
+		Account account = accountDao.getAccount(accountNumber );
 		if(account != null)
 		{
 			System.out.println(account);//Please take a confirmation after this for deleting
@@ -75,13 +75,14 @@ public class App {
 		
 		System.out.println("Please enter your account number");
 		long accountNumber = scanner.nextLong();
-		Account account = accountDao.getAccounts(1);
+		Account account = accountDao.getAccount(accountNumber);//original version
 		if(account != null)
 			{
 				System.out.println(account);
-				System.out.println("Please enter the account number for updation");
-				account.setAccountNumber(account.getAccountNumber());
-				account = new Account();
+				//System.out.println("Please enter the account number for updation");
+				//account.setAccountNumber(account.getAccountNumber());
+				//scanner.nextLine();
+				//account = new Account();//new version
 				scanner.nextLine();
 				System.out.println("Please enter your Name");
 				account.setAccountHolderName(scanner.nextLine());
@@ -107,7 +108,7 @@ public class App {
 	private void viewAccount() {
 		System.out.println("Please enter your account number");
 		long accountNumber = scanner.nextLong();
-		Account account = accountDao.getAccounts(1);
+		Account account = accountDao.getAccount(accountNumber);
 		if(account != null)
 			System.out.println(account);
 		else
